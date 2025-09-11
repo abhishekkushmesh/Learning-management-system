@@ -46,7 +46,7 @@ const Player = () => {
               <div className='flex items-center justify-between px-4 py-3 cursor-pointer select-none'
                 onClick={() => toggleSection(index)}>
                 <div className='flex items-center gap-2'>
-                  <img className={`transition transition-transform 
+                  <img className={`transform transition-transform 
                   ${openSections[index] ? 'rotate-180' : ''}`}
                   src={assets.down_arrow_icon} alt="arrow icon" />
                   <p className='text-sm font-medium md:text-base'>{chapter.chapterTitle}</p>
@@ -88,9 +88,8 @@ const Player = () => {
       <div className='md:mt-10'> 
         {playerData ? (
           <div>
-            <YouTube videoId={playerData.lectureUrl.split('/').pop()} opts={{playerVars: {
-                  autoplay: 1
-                }}} iframeClassName = 'w-full aspect-video' />
+            <YouTube videoId={playerData.lectureUrl.split('/').pop()} 
+             iframeClassName = 'w-full aspect-video' />
                 <div className='flex items-center justify-between mt-1'>
                   <p>{playerData.chapter}.{playerData.lecture} {playerData.lectureTitle}</p>
                   <button className='text-blue-600' >{false ? 'completed' : 'Mark Completed'}</button>
@@ -106,4 +105,5 @@ const Player = () => {
   )
 }
 
-export default Player
+export default Player;
+
