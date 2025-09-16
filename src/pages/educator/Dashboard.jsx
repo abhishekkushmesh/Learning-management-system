@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../context/AppContext'
 import { assets, dummyDashboardData } from '../../assets/assets'
 import Loading from '../../components/student/Loading'
-
+import logo1 from '../../assets/logo1.svg';
 const Dashboard = () => {
   const { currency } = useContext(AppContext)
   const [dashboardData, setDashboardData] = useState(null)
@@ -66,12 +66,14 @@ const Dashboard = () => {
                   <td className='hidden px-4 py-3 text-center sm:teble-cell'>{index + 1}</td>
                   <td className='flex items-center px-2 py-3 space-x-3 md:px-4'>
                     <img 
-                    src = {item.student.imageUrl}
+                    src = {logo1}
                     alt="Profile" 
-                    className='rounded-full w-9 h-9'
+                    className='rounded-full w-9 h-9 mx-auto'
                     />
-                    <span className='truncate'> {item.student.name} </span>
+                    {/* <span className="px-4 py-3 truncate ">{item.student.name}</span> */}
+
                   </td>
+                  <td className='px-4 py-3 truncate'> {item.student.name} </td>
                   <td className='px-4 py-3 truncate'> {item.courseTitle} </td>
                 </tr>
               ) )}

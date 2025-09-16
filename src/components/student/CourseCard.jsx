@@ -10,7 +10,7 @@ const CourseCard = ({ course }) => {
     <Link 
       to={'/course/' + course._id} 
       onClick={() => scrollTo(0, 0)}
-      className='pb-6 overflow-hidden border rounded-lg border-gray-500/30'
+      className='pb-6 overflow-hidden border border-gray-100 rounded-lg'
     >
       <img className='w-full' src={course.courseThumbnail} alt="" />
       <div className='p-3 text-left'>

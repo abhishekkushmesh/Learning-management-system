@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
+import logo1 from '../../assets/logo1.svg';
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <footer className='w-full mt-10 text-left bg-gray-900 md:px-36'>
         <div className='flex items-start justify-center gap-10 px-8 py-10 border-b flext-col md:flex-row md:px-0 border-white/30 md:gap-32'> 
             <div className='flex flex-col items-center w-full md:items-start'>
-              <img src={assets.logo_dark} alt="logo" />
+              <img src={logo1} alt="logo1"  className="w-10 cursor-pointer lg:w-12"/>
               <p className='mt-6 text-sm text-center text-white md:text-left/80'>Lorem ipsum dolor sit amet consectetur, 
                 adipisicing elit. Quibusdam iusto non, porro similique corporis 
                 atque possimus. Placeat, quibusdam? Harum accusantium maiores,  
@@ -33,7 +34,7 @@ const Footer = () => {
             </div>
         </div>
         <p className='py-4 text-xs text-center text-white/60 md:text-sm'>
-          Copyright 2025 © EduEleVate. All Right Reserved.
+          Copyright 2025 © Abhishek . All Right Reserved.
         </p>
       </footer>
     </div>

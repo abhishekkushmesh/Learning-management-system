@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { assets } from '../../assets/assets';
 import { useClerk , UserButton, useUser} from '@clerk/clerk-react';
 import { AppContext } from '../../context/AppContext';
+import logo1 from '../../assets/logo1.svg'; 
+
 
 const Navbar = () => {
   const {navigate, isEducator} = useContext(AppContext)
@@ -14,9 +16,13 @@ const Navbar = () => {
   const {user} =useClerk()
 
   return (
-    <div className={`flex items-center px-4 py-4 border-b border-gray-500 justify-between sm:px-10 md:px-14 lg:px-36 ${isCourseListPage ? 'bg-white' : 'bg-cyan-100/70'}`}>
-      <img onClick={()=> navigate('/')} src={assets.logo} alt="Logo" className="cursor-pointer w-28 lg:w-32" />
-      
+    <div className={`flex items-center px-4 py-4 border-b border-gray-500 justify-between sm:px-10 md:px-14 lg:px-36 ${isCourseListPage ? 'bg-white' : 'bg-red-200/70'}`}>
+      <img
+      onClick={() => navigate('/')}
+      src={logo1}
+      alt="Logo1"
+      className="w-10 cursor-pointer lg:w-12"
+    />
       <div className="items-center hidden gap-5 text-gray-500 md:flex">
         <div className='flex items-center gap-5'>
         { user && 

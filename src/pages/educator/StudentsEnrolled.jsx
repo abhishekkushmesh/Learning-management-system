@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import { dummyStudentEnrolled } from '../../assets/assets.js'
 import Loading from '../../components/student/Loading.jsx'
-
+import logo1 from '../../assets/logo1.svg';
 const StudentsEnrolled = () => {
   const [enrolledStudents, setEnrolledStudents] = useState(null)
 
@@ -15,7 +15,7 @@ const StudentsEnrolled = () => {
   }, [])
 
   return enrolledStudents ? (
-    <div className="flex flex-col items-start justify-between min-h-screen p-4 pt-8 pb-0 md:pb-0 md:p-8">
+    <div className="flex flex-col items-start justify-between min-h-screen p-4 pt-8 pb-0 md:pb-0 md:p-8 ">
       <div className="flex flex-col items-center w-full max-w-4xl overflow-hidden bg-white border rounded-md border-gray-500/20">
         <table className="w-full pb-4 overflow-hidden table-fixed md:table-auto">
           <thead className="text-sm text-left text-gray-900 border-b border-gray-500/20">
@@ -34,7 +34,7 @@ const StudentsEnrolled = () => {
                 </td>
                 <td className="flex items-center px-2 py-3 space-x-2 md:px-4">
                   <img
-                    src={item.student.imageUrl}
+                    src={logo1}
                     alt=""
                     className="rounded-full w-9 h-9"
                   />
