@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
+import logo1 from '../../assets/logo1.svg';
 
 const Footer = () => {
   return (
@@ -7,11 +8,11 @@ const Footer = () => {
       {/* left side */}
       <div className='flex items-center gap-4'>
         
-          <img className='hidden w-20 md:block' src={assets.logo} alt="logo" />
+          <img src={logo1} alt="logo1" className="w-10 cursor-pointer lg:w-12"/>
         
         <div className='hidden w-px bg-gray-500/60 md:block h-70'></div>
           <div>
-            <p className='py-4 text-xs text-center text-gray-500 md:text-sm'>Copyright 2025 © EduEleVate. All Right Reserved.</p>
+            <p className='py-4 text-xs text-center text-gray-500 md:text-sm'>Copyright 2025 © Abhishek. All Right Reserved.</p>
           </div>
         </div>
 
